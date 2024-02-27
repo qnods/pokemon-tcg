@@ -1,4 +1,4 @@
-import { PostData } from './components/handleChange';
+import { PostData } from './components/PostData';
 import { AllUser } from './components/allUser';
 import { useState } from 'react';
 
