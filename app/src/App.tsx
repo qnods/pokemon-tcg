@@ -1,15 +1,24 @@
-// App.tsx
-import { PokemonFetcher } from './components/PokemonFetcher';
-import { PokemonCardComponent } from './components/PokemonCardDisplay';
+import { PostData } from './components/handleChange';
+import { AllUser } from './components/allUser';
+import { useState } from 'react';
 
 function App() {
-  const pokemonCard = PokemonFetcher();
+  const [showPostData, setShowPostData] = useState<boolean>(false);
+  const [showAllUser, setShowAllUser] = useState<boolean>(false);
 
   return (
-    <div className="container mx-auto px-4">
-      <PokemonCardComponent pokemonCard={pokemonCard} />
+    <div>
+      <button onClick={() => setShowPostData(!showPostData)}>
+        {showPostData ? 'Hide PostData' : 'Show PostData'}
+      </button>
+      <button onClick={() => setShowAllUser(!showAllUser)}>
+        {showAllUser ? 'Hide AllUser' : 'Show AllUser'}
+      </button>
+      {showPostData && <PostData />}
+      {showAllUser && <AllUser />}
     </div>
   );
 }
+
 
 export default App;
