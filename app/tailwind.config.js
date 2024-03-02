@@ -5,11 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-      // optionally define more sizes
-      // padding: '1rem',
-    },
+    extend: {
+      fontFamily: {
+        'majormonodisplay': ['Major Mono Display', 'monospace'],
+      }
+    }
   },
   plugins: [],
 }

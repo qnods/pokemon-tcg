@@ -1,24 +1,27 @@
 import {useState, useEffect} from 'react';
 
-interface User {
+interface Card {
     id: number;
     name: string;
+    images: {
+      small: string;
+    }
     }
 
-function AllUser() {
-    const [users, setUsers] = useState<User[]>([]);
+function SingleSet() {
+    const [cards, setCards] = useState<Card[]>([]);
   
     useEffect(() => {
       fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
-        .then(data => setUsers(data));
+        .then(data => setCards(data));
     }, []);
 
     return (
         <div>
           <h2>All Users</h2>
           <ul>
-            {users.map((user: User) => (
+            {cards.map((user: Card) => (
               <li key={user.id}>{user.name}</li>
             ))}
           </ul>
@@ -27,4 +30,4 @@ function AllUser() {
 
 }
 
-export {AllUser};
+export {SingleSet};

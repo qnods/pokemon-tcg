@@ -1,21 +1,14 @@
-import { PostData } from './components/PostData';
-import { AllUser } from './components/allUser';
-import { useState } from 'react';
+import { Brand } from './components/Brand';
+import {SingleCard} from './components/SingleCard';
 
 function App() {
-  const [showPostData, setShowPostData] = useState<boolean>(false);
-  const [showAllUser, setShowAllUser] = useState<boolean>(false);
+
 
   return (
     <div>
-      <button onClick={() => setShowPostData(!showPostData)}>
-        {showPostData ? 'Hide PostData' : 'Show PostData'}
-      </button>
-      <button onClick={() => setShowAllUser(!showAllUser)}>
-        {showAllUser ? 'Hide AllUser' : 'Show AllUser'}
-      </button>
-      {showPostData && <PostData />}
-      {showAllUser && <AllUser />}
+      <Brand />
+      <SingleCard />
+
     </div>
   );
 }
