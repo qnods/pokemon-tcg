@@ -23,7 +23,7 @@ function SingleCard() {
     };
 
     return (
-        <div className="container mx-auto">
+      <div className="container mx-auto p-4">
           <input type="text" value={cardId} onChange={handleIdChange} placeholder="Enter ID" />
           {cardId === '' || card === null ? <div>Loading...</div> : <div>{card?.name}</div>}
           {cardId === '' || card === null ? <div>Loading...</div> : <img src={card?.images?.small} alt={card?.name} />}

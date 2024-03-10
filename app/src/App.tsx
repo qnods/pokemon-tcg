@@ -1,5 +1,9 @@
 import { Brand } from './components/Brand';
 import {SingleCard} from './components/SingleCard';
+import { Navbar } from "./components/Navbar";
+import { SingleSet } from './components/SingleSet';
+import { Dual } from './components/Dual';
+
 
 function App() {
 
@@ -7,7 +11,8 @@ function App() {
   return (
     <div>
       <Brand />
-      <SingleCard />
+      <Navbar />
+      <SingleSet />
 
     </div>
   );
