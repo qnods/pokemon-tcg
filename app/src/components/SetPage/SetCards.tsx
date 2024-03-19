@@ -11,7 +11,6 @@ interface Card {
     }
     types: string[];
     rarity: string;
-    subtypes: string[];
   }
 
   function SetCards({ setID }: { setID: string }) {
@@ -33,7 +32,6 @@ interface Card {
                     <p>{card?.name}</p>
                     <p>{card?.types}</p>
                     <p>{card?.rarity}</p>
-                    <p>{card?.subtypes}</p>
                 </li>
                 ))}
             </ul>
