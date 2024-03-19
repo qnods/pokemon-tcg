@@ -24,6 +24,7 @@ function Navbar() {
             <div className="col-span-2 bg-blue-300">Dropdown Set</div>
             <div className="col-span-2 bg-blue-300">Search Card</div>
         </div>
+
     );
 }
 

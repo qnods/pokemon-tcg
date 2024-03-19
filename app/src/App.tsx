@@ -1,8 +1,5 @@
-import { Brand } from './components/Brand';
-import {SingleCard} from './components/SingleCard';
-import { Navbar } from "./components/Navbar";
-import { SingleSet } from './components/SingleSet';
-import { Dual } from './components/Dual';
+import { Header } from "./components/Header/Header";
+import { SingleSet } from './components/SetPage/SingleSet';
 
 
 function App() {
@@ -10,8 +7,7 @@ function App() {
 
   return (
     <div>
-      <Brand />
-      <Navbar />
+      <Header />
       <SingleSet />
 
     </div>
