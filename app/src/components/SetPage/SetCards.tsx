@@ -17,7 +17,7 @@ interface Card {
     const [cards, setCards] = useState<Card[]>([]);
   
     useEffect(() => {
-      fetch(`https://api.pokemontcg.io/v2/cards?q=set.id:${setID}&&name:Hoppip`)
+      fetch(`https://api.pokemontcg.io/v2/cards?q=set.id:${setID}`)
         .then(response => response.json())
         .then(data => setCards(data.data));
     }, [setID]);

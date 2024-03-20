@@ -3,7 +3,7 @@ import { Navbar } from "./Navbar";
 
 function Header() {
   return (
-    <div>
+    <div className="p-4">
       <Brand />
       <Navbar />
     </div>
