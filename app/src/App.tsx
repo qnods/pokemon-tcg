@@ -1,15 +1,9 @@
 import { Brand } from "./components/Header/Brand";
 import { AboutUs } from "./components/Header/AboutUs";
 import { SetPage } from './components/SetPage/SetPage';
-import { SingleCard } from "./components/CardPage/SingleCard";
+import { CardPage } from './components/CardPage/CardPage';
 import { useState } from 'react';
 
-
-function ComponentB() {
-  return <h1>Component B</h1>;
-  }
-  
-  
   function ComponentC() {
   return <h1>Component C</h1>;
   }
@@ -29,7 +23,7 @@ function App() {
             <button onClick={() => setComponent('B')}>Single Card</button>
           </div>
       </div>
-      {component === 'A' ? <SetPage /> : component === 'B' ? <SingleCard /> : <ComponentC />}
+      {component === 'A' ? <SetPage /> : component === 'B' ? <CardPage /> : <ComponentC />}
 
     </div>
   );
