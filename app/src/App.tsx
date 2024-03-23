@@ -14,10 +14,20 @@ function App() {
       <div className="container mx-auto p-4 grid grid-cols-5 gap-4">
           <AboutUs />
           <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
-            <button onClick={() => setComponent('Set Page')}>Set Cards</button>
+            <button 
+                className={`p-2 ${component === 'Set Page' ? 'bg-red-500' : 'bg-black'}`} 
+                onClick={() => setComponent('Set Page')}
+              >
+                Set Cards
+              </button>
           </div>
           <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
-            <button onClick={() => setComponent('Card Page')}>Single Card</button>
+            <button 
+                className={`p-2 ${component === 'Card Page' ? 'bg-red-500' : 'bg-black'}`} 
+                onClick={() => setComponent('Card Page')}
+              >
+                Single Card
+              </button>
           </div>
       </div>
       {component === 'Set Page' ? <SetPage /> : component === 'Card Page' ? <CardPage /> : <SetPage />}

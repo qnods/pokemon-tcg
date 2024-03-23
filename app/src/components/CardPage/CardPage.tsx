@@ -9,10 +9,16 @@ function CardPage(){
     <div>
       <div className="container mx-auto p-4 grid grid-cols-4 gap-4">
           <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
-            <button onClick={() => setComponent('Card Id Section')}>Card By Id</button>
+            <button 
+              className={`p-2 ${component === 'Card Id Section' ? 'bg-red-500' : 'bg-black'}`} 
+              onClick={() => setComponent('Card Id Section')}
+            >Card By Id</button>
           </div>
           <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
-            <button onClick={() => setComponent('Card Find Section')}>Find Card(s)</button>
+            <button
+              className={`p-2 ${component === 'Card Find Section' ? 'bg-red-500' : 'bg-black'}`} 
+              onClick={() => setComponent('Card Find Section')}
+            >Find Card(s)</button>
           </div>
       </div>
       {component === 'Card Id Section' ? <CardIdSection /> : component === 'Card Find Section' ? <CardFindSection /> : <CardIdSection />}
