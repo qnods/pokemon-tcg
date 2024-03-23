@@ -1,29 +1,24 @@
-import { useState } from 'react';
-import { CardDetail } from './CardDetail';
+import {useState} from "react";
+import { CardIdSection } from "./CardIdSection/CardIdSection";
+import { CardFindSection } from "./CardFindSection/CardFindSection"
 
-
-
-function CardPage() {
-    const [cardId, setCardId] = useState<string>('');
-  
-    const handleIdChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setCardId(event.target.value);
-    };
+function CardPage(){
+    const [component, setComponent] = useState('Card Id Section');
 
     return (
-      <div>
-        {/* Page Navbar */}
-        <div className="container mx-auto px-4 grid grid-cols-5 gap-4">
-          <div className="col-span-5 bg-black p-4 text-xl text-center font-majormonodisplay">
-            <input type="text" value={cardId} onChange={handleIdChange} placeholder="Enter ID" />
+    <div>
+      <div className="container mx-auto p-4 grid grid-cols-4 gap-4">
+          <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
+            <button onClick={() => setComponent('Card Id Section')}>Card By Id</button>
           </div>
-        </div>
-        {/* Main Page Component */}
-      
-        <CardDetail cardId={cardId} />
-     
-
+          <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
+            <button onClick={() => setComponent('Card Find Section')}>Find Card(s)</button>
+          </div>
       </div>
-      );
+      {component === 'Card Id Section' ? <CardIdSection /> : component === 'Card Find Section' ? <CardFindSection /> : <CardIdSection />}
+
+    </div>
+    )
 }
+
 export {CardPage};

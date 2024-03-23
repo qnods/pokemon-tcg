@@ -4,11 +4,16 @@ import { Card } from './CardType';
 
 function CardDetail({cardId}: {cardId: string}) {
     const [card, setCard] = useState<Card | null>(null);
-
+    
     useEffect(() => {
-        fetch(`https://api.pokemontcg.io/v2/cards/${cardId}`)
-          .then(response => response.json())
-          .then(data => setCard(data.data));
+        if (cardId !== '') {
+            fetch(`https://api.pokemontcg.io/v2/cards/${cardId}`)
+            .then(response => response.json())
+            .then(data => setCard(data.data));
+
+        } else {
+            setCard(null);
+        }
       }, [cardId]);
     
     return (

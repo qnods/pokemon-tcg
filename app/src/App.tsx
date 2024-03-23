@@ -1,15 +1,12 @@
 import { Brand } from "./components/Header/Brand";
 import { AboutUs } from "./components/Header/AboutUs";
 import { SetPage } from './components/SetPage/SetPage';
-import { CardPage } from './components/CardPage/CardPage';
+import { CardPage } from './components/CardPage/CardPage'
 import { useState } from 'react';
 
-  function ComponentC() {
-  return <h1>Component C</h1>;
-  }
 
 function App() {
-  const [component, setComponent] = useState('C');
+  const [component, setComponent] = useState('Set Page');
 
   return (
     <div>
@@ -17,13 +14,20 @@ function App() {
       <div className="container mx-auto p-4 grid grid-cols-5 gap-4">
           <AboutUs />
           <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
-            <button onClick={() => setComponent('A')}>Set Cards</button>
+            <button onClick={() => setComponent('Set Page')}>Set Cards</button>
           </div>
           <div className="col-span-2 bg-black text-center text-white text-xl font-majormonodisplay p-4">
-            <button onClick={() => setComponent('B')}>Single Card</button>
+            <button onClick={() => setComponent('Card Page')}>Single Card</button>
           </div>
       </div>
-      {component === 'A' ? <SetPage /> : component === 'B' ? <CardPage /> : <ComponentC />}
+      {component === 'Set Page' ? <SetPage /> : component === 'Card Page' ? <CardPage /> : <SetPage />}
+
+      {/* footer */}
+      <div className="fixed bottom-0 w-full bg-black text-white">
+        <div className="container mx-auto p-4">
+          <p>© 2022 qnods by Edward Joesoef. All rights reserved.</p>
+        </div>
+      </div>
 
     </div>
   );
