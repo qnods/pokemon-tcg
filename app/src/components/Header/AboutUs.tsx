@@ -15,10 +15,11 @@ function AboutUs(){
                 <>
                     <br/>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                        ut aliquip ex ea commodo consequat.
+                        Welcome to Pokémon TCG Database that is curated by qnods with Pokemon TCG API.
+                        Your go-to source for all things Pokémon Trading Card Game.
+                        Discover cards and decks with ease.
+                        Dive into our curated collection and join a vibrant community of players.
+                        Start your adventure with us today! <br />
                     </p>
                 </>
             )}
